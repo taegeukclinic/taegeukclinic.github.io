@@ -544,6 +544,30 @@
   }
   .care-note svg{width:18px;height:18px;color:var(--gold-deep);flex:none;margin-top:4px}
 
+  /* ---------- treatments ---------- */
+  .treat-head{text-align:center;max-width:44em;margin:0 auto 58px}
+  .treat-head .eyebrow{justify-content:center}
+  .treat-head .eyebrow::before{display:none}
+
+  .treat-grid{
+    display:grid;
+    grid-template-columns:repeat(6,minmax(0,1fr));
+    gap:26px;
+    align-items:stretch;
+  }
+  .treat-card{grid-column:span 2}
+  .treat-card:nth-child(4),
+  .treat-card:nth-child(5){grid-column:span 3}
+  .treat-card .card-top{margin-bottom:20px}
+  .treat-card h3{font-size:20px;margin-bottom:0}
+  .treat-card h3 .t-sub{
+    display:block;margin-top:9px;
+    font-family:var(--sans);font-weight:500;
+    font-size:15.5px;line-height:1.62;
+    letter-spacing:0;color:var(--gold-deep);
+  }
+  .treat-card p{margin-top:15px;margin-bottom:0}
+
   /* ---------- hours ---------- */
   .hours-grid{
     display:grid;
@@ -788,6 +812,10 @@
     .hours-grid{gap:44px}
     .location-grid{gap:44px}
     .nav{gap:26px;margin-right:24px}
+    .treat-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+    .treat-card,
+    .treat-card:nth-child(4){grid-column:span 1;padding:32px 26px 30px}
+    .treat-card:nth-child(5){grid-column:span 2}
   }
 
   @media (max-width:920px){
@@ -827,6 +855,8 @@
     .doctor-body{padding-top:0}
     .care-grid{grid-template-columns:minmax(0,1fr);gap:18px}
     .care-card{padding:30px 26px 26px}
+    .treat-grid{grid-template-columns:minmax(0,1fr);gap:18px}
+    .treat-card,.treat-card:nth-child(4),.treat-card:nth-child(5){grid-column:auto}
     .hours-grid{grid-template-columns:minmax(0,1fr);gap:38px}
     .location-grid{grid-template-columns:minmax(0,1fr);gap:38px}
     .channel-grid{grid-template-columns:minmax(0,1fr)}
@@ -867,6 +897,10 @@
     .care-head{margin-bottom:38px}
     .care-card h3{font-size:19px}
     .care-card p{font-size:16.5px}
+    .treat-head{margin-bottom:34px}
+    .treat-card h3{font-size:19px}
+    .treat-card h3 .t-sub{font-size:15px;margin-top:8px}
+    .treat-card p{font-size:16.5px}
     .hours-row{padding:16px 20px}
     .hours-table .table-head{padding:18px 20px}
     .hours-row .day,.hours-row .time{font-size:16.5px}
@@ -918,6 +952,12 @@
     <symbol id="i-person" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
       <circle cx="12" cy="8" r="3.6"/>
       <path d="M4.5 20.5c.6-3.9 3.7-6 7.5-6s6.9 2.1 7.5 6"/>
+    </symbol>
+    <symbol id="i-flow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8.6 20.4V5.6"/>
+      <path d="M5.1 9.1 8.6 5.6l3.5 3.5"/>
+      <path d="M15.4 3.6v14.8"/>
+      <path d="M11.9 14.9l3.5 3.5 3.5-3.5"/>
     </symbol>
     <symbol id="i-balance" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
       <path d="M12 3v18"/>
@@ -990,6 +1030,7 @@
       <a href="#philosophy">진료철학</a>
       <a href="#doctor">의료진</a>
       <a href="#care">주요진료</a>
+      <a href="#treatments">치료법</a>
       <a href="#hours">진료안내</a>
       <a href="#location">오시는 길</a>
     </nav>
@@ -1215,6 +1256,84 @@
         <svg aria-hidden="true"><use href="#i-info"/></svg>
         <span>진료 내용은 개인의 상태에 따라 달라지며, 자세한 것은 진료 시 상담을 통해 안내드립니다.</span>
       </p>
+    </div>
+  </section>
+
+  <!-- ===== treatments ===== -->
+  <section class="section" id="treatments">
+    <div class="container">
+      <div class="treat-head reveal">
+        <p class="eyebrow">치료법 안내</p>
+        <h2 class="section-title">태극한의원 치료법 안내</h2>
+        <p class="section-lead">태극한의원에서 진료하는 다섯 가지 치료법입니다.</p>
+      </div>
+
+      <div class="treat-grid">
+        <article class="care-card treat-card reveal">
+          <div class="card-top">
+            <span class="card-icon"><svg aria-hidden="true"><use href="#i-balance"/></svg></span>
+            <span class="card-no">01</span>
+          </div>
+          <h3><span>사암침</span><span class="t-sub">오행의 균형을 바로잡는 침 치료</span></h3>
+          <p>
+            진맥으로 오장육부의 허와 실을 살핀 뒤, 팔꿈치와 무릎 아래의 주요 혈자리를
+            중심으로 자침하여 기혈의 순환을 돕는 전통 침법입니다. 몸 전체의 흐름을 살피며
+            스스로 균형을 회복할 수 있도록 돕습니다.
+          </p>
+        </article>
+
+        <article class="care-card treat-card reveal">
+          <div class="card-top">
+            <span class="card-icon"><svg aria-hidden="true"><use href="#i-moon"/></svg></span>
+            <span class="card-no">02</span>
+          </div>
+          <h3><span>마음침</span><span class="t-sub">긴장과 감정의 매듭을 푸는 치료</span></h3>
+          <p>
+            오래 쌓인 스트레스와 불안, 긴장으로 굳어진 몸과 마음의 흐름을 함께 살피는
+            침 치료입니다. 호흡과 자율신경이 편안해지도록 도와 몸의 이완과 정서적 안정을
+            함께 도모합니다.
+          </p>
+        </article>
+
+        <article class="care-card treat-card reveal">
+          <div class="card-top">
+            <span class="card-icon"><svg aria-hidden="true"><use href="#i-flow"/></svg></span>
+            <span class="card-no">03</span>
+          </div>
+          <h3><span>수승화강약침</span><span class="t-sub">상부 열은 내리고 하부 온기는 채우는 약침</span></h3>
+          <p>
+            머리와 가슴에 뭉친 열은 내려 주고 아랫배의 따뜻한 기운은 북돋아, 몸의 상하
+            순환을 맞추는 약침 치료입니다. 한약재에서 추출한 성분을 경혈에 직접 주입하여
+            국소 순환과 전체 균형 회복을 함께 돕습니다.
+          </p>
+        </article>
+
+        <article class="care-card treat-card reveal">
+          <div class="card-top">
+            <span class="card-icon"><svg aria-hidden="true"><use href="#i-spine"/></svg></span>
+            <span class="card-no">04</span>
+          </div>
+          <h3><span>추나</span><span class="t-sub">틀어진 척추와 근막을 바로잡는 수기 치료</span></h3>
+          <p>
+            한의사가 직접 손으로 척추와 관절, 근육의 정렬 상태를 살펴 밀고 당기며 균형을
+            맞추는 수기 요법입니다. 굳어진 연부조직을 이완하고 체형의 부담을 덜어 편안한
+            움직임을 돕습니다.
+          </p>
+        </article>
+
+        <article class="care-card treat-card reveal">
+          <div class="card-top">
+            <span class="card-icon"><svg aria-hidden="true"><use href="#i-leaf"/></svg></span>
+            <span class="card-no">05</span>
+          </div>
+          <h3><span>체질한약</span><span class="t-sub">진맥과 체질에 맞춘 1:1 한약 처방</span></h3>
+          <p>
+            사람마다 다른 체질과 현재 몸 상태, 증상의 뿌리를 진맥과 상담으로 세밀하게
+            살펴 처방하는 맞춤 한약입니다. 부족한 기운은 보충하고 과한 열과 노폐물은 비워
+            몸의 균형을 되찾도록 돕습니다.
+          </p>
+        </article>
+      </div>
     </div>
   </section>
 
