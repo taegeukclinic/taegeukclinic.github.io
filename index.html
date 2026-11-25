@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>태극한의원 | 증상 너머의 사람을 봅니다 · 인천 송도 한의원</title>
 <meta name="description" content="인천 송도 태극한의원. 증상 너머의 사람을 봅니다. 불편한 증상과 감정은 흐름과 균형을 회복하라고 몸이 알려주는 메시지입니다. 만성 통증·관절·근골격 균형, 자율신경·수면·마음 건강, 소화기·호흡기·피부·면역, 갱년기·웰에이징·활력을 수승화강 한방원리로 살피는 진료. 평일 10:00–18:00(점심 13:00–14:00), 토요일 10:00–13:00.">
-<meta name="keywords" content="송도한의원, 인천송도한의원, 태극한의원, 사암침, 마음침, 수승화강약침, 체질한약, 만성 통증, 관절, 근골격, 자율신경, 수면, 소화기, 호흡기, 피부, 면역, 만성염증, 갱년기, 웰에이징, 활력, 맞춤 보약">
+<meta name="keywords" content="송도한의원, 인천송도한의원, 태극한의원, 사암침, 마음침, 수승화강약침, 추나, 체질한약, 만성 통증, 관절, 근골격, 자율신경, 수면, 소화기, 호흡기, 피부, 면역, 만성염증, 갱년기, 웰에이징, 활력, 맞춤 보약">
 <meta property="og:type" content="website">
 <meta property="og:title" content="태극한의원 | 증상 너머의 사람을 봅니다">
 <meta property="og:description" content="인천 송도 태극한의원. 수승화강 한방원리로 흐름과 균형의 회복을 돕는 진료. 만성 통증·관절·근골격 균형, 자율신경·수면·마음 건강, 소화기·호흡기·피부·면역, 갱년기·웰에이징·활력.">
@@ -425,10 +425,7 @@
     display:flex;align-items:baseline;justify-content:space-between;gap:12px;
   }
   .portrait-plate .p-name{
-    font-family:var(--serif);font-size:19px;color:var(--navy);letter-spacing:.24em;
-  }
-  .portrait-plate .p-role{
-    font-size:12.5px;letter-spacing:.06em;color:#70747F;text-align:right;line-height:1.5;
+    font-family:var(--serif);font-size:19px;color:var(--navy);letter-spacing:.07em;
   }
 
   .doctor-body{position:relative;z-index:1;min-width:0;padding-top:4px}
@@ -557,7 +554,9 @@
     gap:26px;
     align-items:stretch;
   }
-  .treat-card{grid-column:span 3}
+  .treat-card{grid-column:span 2}
+  .treat-card:nth-child(4),
+  .treat-card:nth-child(5){grid-column:span 3}
   .treat-card .card-top{margin-bottom:20px}
   .treat-card h3{font-size:20px;margin-bottom:0}
   .treat-card h3 .t-sub{
@@ -813,7 +812,9 @@
     .location-grid{gap:44px}
     .nav{gap:26px;margin-right:24px}
     .treat-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-    .treat-card{grid-column:span 1;padding:32px 26px 30px}
+    .treat-card,
+    .treat-card:nth-child(4){grid-column:span 1;padding:32px 26px 30px}
+    .treat-card:nth-child(5){grid-column:span 2}
   }
 
   @media (max-width:920px){
@@ -854,7 +855,7 @@
     .care-grid{grid-template-columns:minmax(0,1fr);gap:18px}
     .care-card{padding:30px 26px 26px}
     .treat-grid{grid-template-columns:minmax(0,1fr);gap:18px}
-    .treat-card{grid-column:auto}
+    .treat-card,.treat-card:nth-child(4),.treat-card:nth-child(5){grid-column:auto}
     .hours-grid{grid-template-columns:minmax(0,1fr);gap:38px}
     .location-grid{grid-template-columns:minmax(0,1fr);gap:38px}
     .channel-grid{grid-template-columns:minmax(0,1fr)}
@@ -1138,8 +1139,7 @@
                  width="816" height="948" decoding="async">
           </div>
           <div class="portrait-plate">
-            <span class="p-name">박경남</span>
-            <span class="p-role">한의사<br>태극한의원 원장</span>
+            <span class="p-name">원장 박경남</span>
           </div>
         </div>
 
@@ -1218,6 +1218,7 @@
             <li>불면</li>
             <li>스트레스</li>
             <li>자율신경 균형</li>
+            <li>마음건강</li>
           </ul>
         </article>
 
@@ -1236,7 +1237,6 @@
             <li>호흡기</li>
             <li>피부</li>
             <li>만성염증</li>
-            <li>체질개선</li>
             <li>면역</li>
           </ul>
         </article>
@@ -1255,7 +1255,7 @@
             <li>갱년기</li>
             <li>웰에이징</li>
             <li>활력</li>
-            <li>체질 변화</li>
+            <li>체질개선</li>
           </ul>
         </article>
       </div>
@@ -1273,7 +1273,7 @@
       <div class="treat-head reveal">
         <p class="eyebrow">치료법 안내</p>
         <h2 class="section-title">태극한의원 치료법 안내</h2>
-        <p class="section-lead">태극한의원에서 진료하는 네 가지 치료법입니다.</p>
+        <p class="section-lead">태극한의원에서 진료하는 다섯 가지 치료법입니다.</p>
       </div>
 
       <div class="treat-grid">
@@ -1318,8 +1318,20 @@
 
         <article class="care-card treat-card reveal">
           <div class="card-top">
-            <span class="card-icon"><svg aria-hidden="true"><use href="#i-leaf"/></svg></span>
+            <span class="card-icon"><svg aria-hidden="true"><use href="#i-spine"/></svg></span>
             <span class="card-no">04</span>
+          </div>
+          <h3><span>추나</span><span class="t-sub">틀어진 척추와 근막을 바로잡는 수기 치료</span></h3>
+          <p>
+            전체적인 몸의 정렬 상태를 살피고 힘의 흐름과 균형을 맞추는 수기 요법입니다.
+            굳어진 연부조직을 이완하고 체형의 부담을 덜어 편안한 움직임을 돕습니다.
+          </p>
+        </article>
+
+        <article class="care-card treat-card reveal">
+          <div class="card-top">
+            <span class="card-icon"><svg aria-hidden="true"><use href="#i-leaf"/></svg></span>
+            <span class="card-no">05</span>
           </div>
           <h3><span>체질한약</span><span class="t-sub">진맥과 체질에 맞춘 1:1 한약 처방</span></h3>
           <p>
